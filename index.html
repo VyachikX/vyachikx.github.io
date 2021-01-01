@@ -29,5 +29,35 @@ document.getElementById('say').addEventListener('click', say_hui);
 </script>
 <center><h1>Всех с новым годом!<h1></center>
 <center><img src="paSk4UecEXg.jpg" width=1024 height=768 border=0></center>
+<article>
+<html>
+<head>
+
+<title>Login paget</title>
+</head>
+<script type="text/javascript">
+function display(form){
+if (form.username.value=="Vyachik") { 
+  if (form.password.value=="Root") {              
+          location="vyachikx.github.io/folder/horror.html" 
+           } else {
+             alert("Неверный пароль!")
+             }
+        } else {  alert("Неправильное имя пользователя!")
+          }
+      }
+   </script>   
+<body >
+
+<form >
+<input type="text" name="username" /><br><br>
+<input type="password" name="password"/><br><br>
+<input type="button" value="Войти" onClick="display(this.form)"/>
+
+</form>
+</article>
+
+</body>
+</html>
 </body>
 </html>
