@@ -48,7 +48,25 @@ if (form.username.value=="Vyachik") {
           }
       }
    </script>   
-<body >
+<script>
+function readFile(input) {
+  let file = input.files[0];
+
+  let reader = new FileReader();
+
+  reader.readAsText(file);
+
+  reader.onload = function() {
+    alert(reader.result);
+  };
+
+  reader.onerror = function() {
+    alert(reader.error);
+  };
+
+}
+readFile("README.md")
+</script>
 
 <form >
 <input type="text" name="username" /><br><br>
