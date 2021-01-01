@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> </head>
 <body bgcolor="#87CEFA">
 <script>type="application/javascript"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
 a = window.prompt("Напишите что-нибудь, потом это отобразится в окне");
 alert(a);
 </script>
@@ -36,9 +37,13 @@ document.getElementById('say').addEventListener('click', say_hui);
 <title>Login paget</title>
 </head>
 <script type="text/javascript">
+var bytes = CryptoJS.AES.decrypt('U2FsdGVkX1+A5iBjVX3mJM6F7RQEJmeRb7/vJClcBc8=', 'лис лох');
+var plaintext = bytes.toString(CryptoJS.enc.Utf8);
+var bytes1 = CryptoJS.AES.decrypt('U2FsdGVkX1+id1p0yl8Zdmdhmco9Z8iCAngq0mmqawk=', 'лис лох');
+var plaintext1 = bytes1.toString(CryptoJS.enc.Utf8);
 function display(form){
-if (form.username.value=="Vyachik") { 
-  if (form.password.value=="Root") {              
+if (form.username.value==plaintext) { 
+  if (form.password.value==plaintext1) {              
           location="vyachikx.github.io/folder/horror.html" 
            } else {
              alert("Неверный пароль!")
